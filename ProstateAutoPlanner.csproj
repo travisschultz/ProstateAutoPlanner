@@ -5,9 +5,9 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{95693810-AE27-4B45-A230-C520F1877B1E}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
-    <RootNamespace>TPS_Validation</RootNamespace>
-    <AssemblyName>TPS_Validation_GuiMod2</AssemblyName>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ProstateAutoPlanner</RootNamespace>
+    <AssemblyName>ProstateAutoPlanner.esapi</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -50,6 +50,9 @@
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="MigraDoc.DocumentObjectModel, Version=1.32.4334.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
       <HintPath>packages\PDFsharp-MigraDoc-GDI.1.32.4334.0\lib\net20\MigraDoc.DocumentObjectModel.dll</HintPath>
@@ -91,10 +94,6 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <ApplicationDefinition Include="App.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </ApplicationDefinition>
     <Compile Include="CalculateTestPlans.cs" />
     <Compile Include="Internal\CustomStyles.cs" />
     <Compile Include="Internal\HeaderAndFooter.cs" />
@@ -102,8 +101,12 @@
     <Compile Include="Internal\Size.cs" />
     <Compile Include="Internal\ValidationTableContent.cs" />
     <Compile Include="Machine.cs" />
+    <Compile Include="ApPlan.cs" />
+    <Compile Include="Prescription.cs" />
     <Compile Include="RefPointResult.cs" />
     <Compile Include="RunEvaluation.cs" />
+    <Compile Include="Script.cs" />
+    <Compile Include="ApStructure.cs" />
     <Compile Include="UpdateCalculationAlgorithms.cs" />
     <Compile Include="ValidationCase.cs" />
     <Compile Include="ValidationGroup.cs" />
@@ -115,10 +118,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="App.xaml.cs">
-      <DependentUpon>App.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

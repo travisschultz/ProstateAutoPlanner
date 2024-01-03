@@ -7,7 +7,7 @@ using System.Text;
 using VMS.TPS.Common.Model.API;
 using VMS.TPS.Common.Model.Types;
 
-namespace TPS_Validation
+namespace ProstateAutoPlanner
 {
 	public class ValidationTest : INotifyPropertyChanged
 	{

@@ -6,7 +6,7 @@ using System.Text;
 using System.Windows;
 using VMS.TPS.Common.Model.API;
 
-namespace TPS_Validation
+namespace ProstateAutoPlanner
 {
 	public class Machine : INotifyPropertyChanged
 	{

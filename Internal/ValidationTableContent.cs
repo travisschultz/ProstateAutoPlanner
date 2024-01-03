@@ -2,7 +2,7 @@
 using MigraDoc.DocumentObjectModel.Tables;
 using System.Collections.Generic;
 
-namespace TPS_Validation.Internal
+namespace ProstateAutoPlanner.Internal
 {
 	internal class ValidationTableContent
 	{

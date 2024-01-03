@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2026
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32228.430
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPS_Validation", "TPS_Validation.csproj", "{95693810-AE27-4B45-A230-C520F1877B1E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProstateAutoPlanner", "ProstateAutoPlanner.csproj", "{95693810-AE27-4B45-A230-C520F1877B1E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

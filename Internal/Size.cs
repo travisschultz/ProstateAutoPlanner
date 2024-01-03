@@ -1,6 +1,6 @@
 ﻿using MigraDoc.DocumentObjectModel;
 
-namespace TPS_Validation.Internal
+namespace ProstateAutoPlanner.Internal
 {
 	internal class Size
 	{

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Xml.Linq;
 
-namespace TPS_Validation
+namespace ProstateAutoPlanner
 {
 	public static class Xml
 	{

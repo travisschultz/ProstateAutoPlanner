@@ -6,7 +6,7 @@ using System.Text;
 using VMS.TPS.Common.Model.API;
 using VMS.TPS.Common.Model.Types;
 
-namespace TPS_Validation
+namespace ProstateAutoPlanner
 {
 	public class ValidationCase : INotifyPropertyChanged
 	{
@@ -126,7 +126,7 @@ namespace TPS_Validation
 			}
 
 			//
-			foreach (Structure testStruct in TestPlan.StructureSet.Structures) // assumes the same structure set
+			foreach (VMS.TPS.Common.Model.API.Structure testStruct in TestPlan.StructureSet.Structures) // assumes the same structure set
             {
                 if ( testStruct.DicomType.ToUpper() == "PTV")
                 {
@@ -150,13 +150,13 @@ namespace TPS_Validation
                         var tsD95 = TestPlan.GetDoseAtVolume(testStruct, 95, VolumePresentation.Relative, DoseValuePresentation.Absolute);
 
 						if(rsDVH.MaxDose.Dose > 10 && tsDVH.MaxDose.Dose > 10)
-							ValidationTests.Add(new ValidationTest(testStruct.Id + " Dmax", rsDVH.MaxDose, tsDVH.MaxDose, this));
+                            ValidationTests.Add(new ValidationTest(testStruct.Id + " Dmax", rsDVH.MaxDose, tsDVH.MaxDose, this));
 						if (rsDVH.MinDose.Dose > 10 && tsDVH.MinDose.Dose > 10)
-							ValidationTests.Add(new ValidationTest(testStruct.Id + " Dmin", rsDVH.MinDose, tsDVH.MinDose, this));
+                            ValidationTests.Add(new ValidationTest(testStruct.Id + " Dmin", rsDVH.MinDose, tsDVH.MinDose, this));
 						if (rsDVH.MeanDose.Dose > 10 && tsDVH.MeanDose.Dose > 10)
-							ValidationTests.Add(new ValidationTest(testStruct.Id + " Mean", rsDVH.MeanDose, tsDVH.MeanDose, this));
+                            ValidationTests.Add(new ValidationTest(testStruct.Id + " Mean", rsDVH.MeanDose, tsDVH.MeanDose, this));
 						if (rsD95.Dose > 10 && rsD95.Dose > 10)
-							ValidationTests.Add(new ValidationTest(testStruct.Id + " D95", rsD95, tsD95, this));
+                            ValidationTests.Add(new ValidationTest(testStruct.Id + " D95", rsD95, tsD95, this));
 
                     }
                     catch(Exception e)
@@ -179,13 +179,13 @@ namespace TPS_Validation
                         var tsD20 = TestPlan.GetDoseAtVolume(testStruct, 20, VolumePresentation.Relative, DoseValuePresentation.Absolute);
 
 						if (rsDVH.MaxDose.Dose > 10 && tsDVH.MaxDose.Dose > 10)
-							ValidationTests.Add(new ValidationTest(testStruct.Id + " Dmax", rsDVH.MaxDose, tsDVH.MaxDose, this));
+                            ValidationTests.Add(new ValidationTest(testStruct.Id + " Dmax", rsDVH.MaxDose, tsDVH.MaxDose, this));
 						if (rsDVH.MinDose.Dose > 10 && tsDVH.MinDose.Dose > 10)
-							ValidationTests.Add(new ValidationTest(testStruct.Id + " Dmin", rsDVH.MinDose, tsDVH.MinDose, this));
+                            ValidationTests.Add(new ValidationTest(testStruct.Id + " Dmin", rsDVH.MinDose, tsDVH.MinDose, this));
 						if (rsDVH.MeanDose.Dose > 10 && tsDVH.MeanDose.Dose > 10)
-							ValidationTests.Add(new ValidationTest(testStruct.Id + " Mean", rsDVH.MeanDose, tsDVH.MeanDose, this));
+                            ValidationTests.Add(new ValidationTest(testStruct.Id + " Mean", rsDVH.MeanDose, tsDVH.MeanDose, this));
 						if (rsD20.Dose > 10 && tsD20.Dose > 10)
-							ValidationTests.Add(new ValidationTest(testStruct.Id + " D20", rsD20, tsD20, this));
+                            ValidationTests.Add(new ValidationTest(testStruct.Id + " D20", rsD20, tsD20, this));
                     }
                     catch(Exception e)
                     {

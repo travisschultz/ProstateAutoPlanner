@@ -2,7 +2,7 @@
 using MigraDoc.DocumentObjectModel;
 using MigraDoc.DocumentObjectModel.Tables;
 
-namespace TPS_Validation.Internal
+namespace ProstateAutoPlanner.Internal
 {
 	internal class MachineInfo
 	{

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using VMS.TPS.Common.Model.API;
 using VMS.TPS.Common.Model.Types;
 
-namespace TPS_Validation
+namespace ProstateAutoPlanner
 {
     public static class RunEvaluation
     {
